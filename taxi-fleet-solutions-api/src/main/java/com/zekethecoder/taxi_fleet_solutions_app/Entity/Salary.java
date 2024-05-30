@@ -6,20 +6,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Admin {
+public class Salary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer admin_id;
+    private Integer salary_id;
     private LocalDateTime created_at;
-    private String fullName;
-    @Column(unique = true)
-    private String email;
-    private String password;
+    private String description;
+    private String payment_method;
+    private double amount;
+    //    relationships
+//    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval = true)
+    private List<Income> Incomes;
+    private int driver_id;
 
     @PrePersist
     void assignCreatedAt(){

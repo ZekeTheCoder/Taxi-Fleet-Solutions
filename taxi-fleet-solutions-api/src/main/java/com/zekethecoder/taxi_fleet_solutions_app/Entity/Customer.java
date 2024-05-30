@@ -5,24 +5,27 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Admin {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer admin_id;
-    private LocalDateTime created_at;
+    private Integer customer_id;
     private String fullName;
     @Column(unique = true)
     private String email;
-    private String password;
+    private String phone;
+    private String start_date;
+    private String end_date;
+    private String pickup_location;
+    private String dropOff_location;
+    private String booking_status;
+//    relationships
+    private double amount_paid;
 
-    @PrePersist
-    void assignCreatedAt(){
-        this.created_at = LocalDateTime.now();
-    }
+//    @Enumerated(EnumType.STRING)
+//    private Booking booking_status;
+
 }

@@ -11,15 +11,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Admin {
+public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer admin_id;
+    private Integer vehicle_id;
     private LocalDateTime created_at;
-    private String fullName;
-    @Column(unique = true)
-    private String email;
-    private String password;
+    private String name;
+    private String licence_plate;
+    private String category;
+    private double amount;
+    private int income_id;
+    private int driver_id;
+    private int subscriber_id;
 
     @PrePersist
     void assignCreatedAt(){
