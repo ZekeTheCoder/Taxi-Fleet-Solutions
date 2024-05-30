@@ -24,7 +24,7 @@ public class Driver {
     private int driver_id;
     private int vehicle_id;
 //    private int income_id;
-    private List<Income> Incomes;
+//    private List<Income> Incomes;
 
 //    relationships
     private double amount_paid;

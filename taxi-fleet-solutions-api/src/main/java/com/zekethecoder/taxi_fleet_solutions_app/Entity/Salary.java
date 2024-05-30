@@ -22,7 +22,7 @@ public class Salary {
     private double amount;
     //    relationships
 //    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval = true)
-    private List<Income> Incomes;
+//    private List<Income> Incomes;
     private int driver_id;
 
     @PrePersist
