@@ -107,7 +107,7 @@ function DriverForm() {
               <div className="input-field">
                 <label>Vehicle Plate</label>
                 <input
-                  type="number"
+                  type="text"
                   name="vehiclePlate"
                   placeholder="Enter driver vehicle plate"
                   value={driverDetails.vehiclePlate}
@@ -120,7 +120,7 @@ function DriverForm() {
                 <label>Description</label>
                 <input
                   type="text"
-                  placeholder="Enter your customer description"
+                  placeholder="Enter your driver description"
                   name="description"
                   value={driverDetails.description}
                   onChange={handleChange}
