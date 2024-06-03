@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function NewStudents() {
-  const [students, setStudents] = useState([
+function NewCustomers() {
+  const [customers, setCustomers] = useState([
     { name: "John Doe", profile: <i className="fas fa-user"></i> },
     { name: "Jane Doe", profile: <i className="fas fa-user"></i> },
     { name: "Steve Doe", profile: <i className="fas fa-user"></i> },
@@ -11,7 +11,7 @@ function NewStudents() {
   return (
     <div className="new-students">
       <div className="title">
-        <h2>New Students</h2>
+        <h2>New Customers</h2>
         <a href="#" className="btn">
           View All
         </a>
@@ -25,10 +25,10 @@ function NewStudents() {
           </tr>
         </thead>
         <tbody>
-          {students.map((student, index) => (
+          {customers.map((customer, index) => (
             <tr key={index}>
-              <td>{student.profile}</td>
-              <td>{student.name}</td>
+              <td>{customer.profile}</td>
+              <td>{customer.name}</td>
               <td>
                 <i className="fas fa-info-circle"></i>
               </td>
@@ -40,4 +40,4 @@ function NewStudents() {
   );
 }
 
-export default NewStudents;
+export default NewCustomers;

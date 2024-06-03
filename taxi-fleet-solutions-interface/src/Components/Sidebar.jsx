@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Sidebar() {
@@ -10,29 +11,45 @@ function Sidebar() {
         </div>
         <ul>
           <li>
-            <i className="fas fa-tachometer-alt"></i>&nbsp;{" "}
-            <span>Dashboard</span>
+            <NavLink exact to="/" activeClassName="active">
+              <i className="fas fa-tachometer-alt"></i>&nbsp;{" "}
+              <span>Dashboard</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-user"></i>&nbsp; <span>Customers</span>
+            <NavLink exact to="/customer">
+              <i className="fas fa-user"></i>&nbsp; <span>Customers</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-id-card"></i>&nbsp; <span>Drivers</span>
+            <NavLink exact to="/driver">
+              <i className="fas fa-id-card"></i>&nbsp; <span>Drivers</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-van-shuttle"></i>&nbsp;<span>Vehicles</span>
+            <NavLink exact to="/vehicle">
+              <i className="fas fa-van-shuttle"></i>&nbsp;<span>Vehicles</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-plus"></i>&nbsp;<span>Income</span>
+            <NavLink exact to="/income">
+              <i className="fas fa-plus"></i>&nbsp;<span>Income</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-minus"></i>&nbsp;<span>Expense</span>
+            <NavLink exact to="/expense">
+              <i className="fas fa-minus"></i>&nbsp;<span>Expense</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-question-circle"></i>&nbsp; <span>Help</span>
+            <NavLink exact to="/help">
+              <i className="fas fa-question-circle"></i>&nbsp; <span>Help</span>
+            </NavLink>
           </li>
           <li>
-            <i className="fas fa-cog"></i>&nbsp;<span>Settings</span>
+            <NavLink exact to="/settings">
+              <i className="fas fa-cog"></i>&nbsp;<span>Settings</span>
+            </NavLink>
           </li>
         </ul>
       </div>
