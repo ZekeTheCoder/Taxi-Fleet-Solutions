@@ -1,0 +1,66 @@
+.side-menu {
+	position: fixed;
+	background: #33f0ae;
+	width: 20vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.side-menu .brand-name {
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.side-menu li {
+	font-size: 24px;
+	padding: 10px 40px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.side-menu li:hover {
+	background: white;
+	color: #f05462;
+}
+
+@media screen and (max-width: 1050px) {
+	.side-menu li {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.side-menu li span {
+		display: none;
+	}
+
+	.side-menu {
+		align-items: center;
+	}
+
+	.side-menu li i {
+		width: 40px;
+		height: 40px;
+	}
+
+	.side-menu li:hover {
+		background: #f05462;
+		padding: 8px 38px;
+		border: 2px solid white;
+	}
+}
+
+@media screen and (max-width:536px) {
+	.brand-name h1 {
+		font-size: 16px;
+	}
+
+	.side-menu li i {
+		width: 30px;
+		height: 30px;
+	}
+}
