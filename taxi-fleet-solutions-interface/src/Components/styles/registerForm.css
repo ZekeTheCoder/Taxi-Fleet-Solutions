@@ -1,21 +1,24 @@
-/* body {
+/* ===== Google Font Import - Poppins =====
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: #4070f4;
-} */
-
-.titleback {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }
 
-.form-container {
+.container {
 	position: relative;
-	/* max-width: 900px; */
-	background: #4070f4;
+	max-width: 900px;
 	width: 100%;
 	border-radius: 6px;
 	padding: 30px;
@@ -24,14 +27,14 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-container header {
+.container header {
 	position: relative;
 	font-size: 20px;
 	font-weight: 600;
 	color: #333;
 }
 
-.form-container header::before {
+.container header::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -42,7 +45,7 @@
 	background-color: #4070f4;
 }
 
-.form-container form {
+.container form {
 	position: relative;
 	margin-top: 16px;
 	min-height: 490px;
@@ -50,13 +53,13 @@
 	overflow: hidden;
 }
 
-.form-container form .form {
+.container form .form {
 	position: absolute;
 	background-color: #fff;
 	transition: 0.3s ease;
 }
 
-.form-container form .form.second {
+.container form .form.second {
 	opacity: 0;
 	pointer-events: none;
 	transform: translateX(100%);
@@ -74,7 +77,7 @@ form.secActive .form.first {
 	transform: translateX(-100%);
 }
 
-.form-container form .title {
+.container form .title {
 	display: block;
 	margin-bottom: 8px;
 	font-size: 16px;
@@ -83,7 +86,7 @@ form.secActive .form.first {
 	color: #333;
 }
 
-.form-container form .fields {
+.container form .fields {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -130,7 +133,7 @@ select {
 	color: #333;
 }
 
-.form-container form button,
+.container form button,
 .backBtn {
 	display: flex;
 	align-items: center;
@@ -148,7 +151,7 @@ select {
 	cursor: pointer;
 }
 
-.form-container form .btnText {
+.container form .btnText {
 	font-size: 14px;
 	font-weight: 400;
 }
@@ -177,11 +180,11 @@ form .buttons button,
 }
 
 @media (max-width: 750px) {
-	.form-container form {
+	.container form {
 		overflow-y: scroll;
 	}
 
-	.form-container form::-webkit-scrollbar {
+	.container form::-webkit-scrollbar {
 		display: none;
 	}
 
@@ -194,3 +197,4 @@ form .buttons button,
 	form .fields .input-field {
 		width: 100%;
 	}
+} */
