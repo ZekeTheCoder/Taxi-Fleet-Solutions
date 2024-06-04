@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Cards from "./Cards";
 import RecentPayments from "./RecentPayments";
-import NewStudents from "./NewStudents";
+import NewCustomers from "./NewCustomers";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Dashboard() {
@@ -18,7 +18,7 @@ function Dashboard() {
             <Cards />
             <div className="content-2">
               <RecentPayments />
-              <NewStudents />
+              <NewCustomers />
             </div>
           </div>
         </div>

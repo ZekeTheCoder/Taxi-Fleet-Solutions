@@ -27,6 +27,11 @@ function Sidebar() {
             </NavLink>
           </li>
           <li>
+            <NavLink exact to="/salary">
+              <i className="fas fa-money-bill"></i>&nbsp;<span>Salary</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink exact to="/vehicle">
               <i className="fas fa-van-shuttle"></i>&nbsp;<span>Vehicles</span>
             </NavLink>
