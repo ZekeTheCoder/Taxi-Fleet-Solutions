@@ -1,8 +1,44 @@
 import React, { useState } from "react";
-import "./styles/registerForm.css";
+import { useNavigate } from "react-router-dom";
+import "./styles/form.css";
 
 function CustomerForm() {
+  const [customers, setCustomers] = useState([
+    {
+      id: 1717446705628,
+      fullName: "Thabang Maphangisane",
+      email: "thabangh647@gmail.com",
+      phone: "0729959556",
+      gender: "Male",
+      address: "112 Rabie street, Randburg,2188",
+      paymentDate: "2024-06-05",
+      expiryDate: "2024-06-08",
+      pickUpLocation: "Juta Street",
+      dropOffLocation: "Cosmo",
+      description: "white taxi",
+      status: "active",
+    },
+    {
+      id: 1717446705628,
+      fullName: "Thabang Maphangisane",
+      email: "thabangh647@gmail.com",
+      phone: "0729959556",
+      gender: "Male",
+      address: "112 Rabie street, Randburg,2188",
+      paymentDate: "2024-06-05",
+      expiryDate: "2024-06-08",
+      pickUpLocation: "Juta Street",
+      dropOffLocation: "Cosmo",
+      description: "white taxi",
+      status: "active",
+    },
+  ]);
+
+  // creating a navigate variable to redirect
+  const navigate = useNavigate();
+
   const [customerDetails, setCustomerDetails] = useState({
+    id: Date.now(),
     fullName: "",
     email: "",
     phone: "",
@@ -10,12 +46,10 @@ function CustomerForm() {
     address: "",
     paymentDate: "",
     expiryDate: "",
-    amount: "",
     pickUpLocation: "",
     dropOffLocation: "",
     description: "",
     status: "", // active, offline, owing
-    type: "", // weekly, monthly, once off
   });
 
   const handleChange = (e) => {
@@ -28,18 +62,31 @@ function CustomerForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setCustomers([...customers, customerDetails]);
     console.log({
       customerDetails,
     });
   };
 
+  const handleDeleteCustomers = (id, customer) => {
+    setCustomers(customers.filter((customer) => customer.id !== id));
+    setTotal(length(customers));
+  };
+
   return (
     <div className="form-container">
-      <h1>Registration</h1>
       <form onSubmit={handleSubmit}>
         <div className="form first">
           <div className="details personal">
-            <span className="title">Customer Details</span>
+            <div className="titleback">
+              <h2>Customer Details</h2>
+              {/* button to  */}
+              <button className="btn" onClick={() => navigate("/")}>
+                back
+              </button>
+            </div>
+            {/* <span className="title">Customer Details</span> */}
 
             <div className="fields">
               <div className="input-field">
@@ -129,7 +176,7 @@ function CustomerForm() {
                 />
               </div>
 
-              <div className="input-field">
+              {/* <div className="input-field">
                 <label>Amount Paid</label>
                 <input
                   type="number"
@@ -139,8 +186,8 @@ function CustomerForm() {
                   onChange={handleChange}
                   required
                 />
-              </div>
-
+              </div> 
+			  
               <div className="input-field">
                 <label>Type</label>
                 <select
@@ -156,7 +203,7 @@ function CustomerForm() {
                   <option>monthly</option>
                   <option>Once-off</option>
                 </select>
-              </div>
+              </div> */}
 
               <div className="input-field">
                 <label>Status</label>
@@ -221,6 +268,71 @@ function CustomerForm() {
           </div>
         </div>
       </form>
+
+      {/* expense list table*/}
+      <div className="expenses-list">
+        <h2>Customers List</h2>
+        <table>
+          {/* table head */}
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>paymentDate</th>
+              <th>expiryDate</th>
+              <th>pickUpLocation</th>
+              <th>dropOffLocation</th>
+              <th>description</th>
+              <th>status</th>
+              <th>Delete</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          {/* table body */}
+          <tbody id="expense-table-body">
+            {customers.map((customer) => (
+              <tr key={customer.id}>
+                <td>{customer.fullName}</td>
+                <td>{customer.email}</td>
+                <td>{customer.phone}</td>
+                <td>{customer.gender}</td>
+                <td>{customer.address}</td>
+                <td>{customer.paymentDate}</td>
+                <td>{customer.expiryDate}</td>
+                <td>{customer.pickUpLocation}</td>
+                <td>{customer.dropOffLocation}</td>
+                <td>{customer.description}</td>
+                <td>{customer.status}</td>
+                <td>
+                  <button
+                    onClick={() => handleAddIncome(income.id, income.amount)}
+                  >
+                    Delete
+                  </button>
+                </td>
+                <td>
+                  <button
+                  // onClick={() => handleAddIncome(income.id, income.amount)}
+                  >
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          {/* <tfoot>
+            <tr>
+              <td>Total:</td>
+              <td id="total-amount">{total}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot> */}
+        </table>
+      </div>
     </div>
   );
 }

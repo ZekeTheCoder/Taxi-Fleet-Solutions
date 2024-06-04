@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import "./App.css";
 
 function IncomeForm() {
@@ -12,6 +13,9 @@ function IncomeForm() {
 
   const [incomes, setIncomes] = useState([]);
   const [total, setTotal] = useState(0);
+
+  // creating a navigate variable to redirect
+  const navigate = useNavigate();
 
   //   const [incomeDetails, setIncomeDetails] = useState({
   //     id: Date.now(),
@@ -60,6 +64,9 @@ function IncomeForm() {
       <h1>Welcome</h1>
 
       <h1>Taxi Income Tracker Web App</h1>
+      {/* button to  */}
+      <button onClick={() => navigate("/")}>back</button>
+      {/* input-section */}
       <div className="input-section">
         {/* Income Name */}
         <label htmlFor="Name-input">Income Name:</label>
@@ -84,6 +91,10 @@ function IncomeForm() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
+          {" "}
+          <option value="" disabled>
+            Select Category
+          </option>
           <option value="Daily">Daily</option>
           <option value="Weekly">Weekly</option>
           <option value="Monthly">Monthly</option>
@@ -112,6 +123,9 @@ function IncomeForm() {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
+          <option value="" disabled>
+            Select Type
+          </option>
           <option value="Customer">Customer</option>
           <option value="Driver">Driver</option>
           <option value="Other">Other</option>
