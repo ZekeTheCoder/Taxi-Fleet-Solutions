@@ -18,22 +18,24 @@ function LoginForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Retrieve user data from local storage
-    const storedUserData = JSON.parse(localStorage.getItem("user"));
+    try {
+      const response = await fetch(
+        `http://localhost:5000/users?email=${loginData.email}`
+      );
+      const users = await response.json();
 
-    // Check if user exists and credentials match
-    if (
-      storedUserData &&
-      storedUserData.email === loginData.email &&
-      storedUserData.password === loginData.password
-    ) {
-      // Redirect to dashboard
-      navigate("/dashboard");
-    } else {
-      alert("Invalid email or password");
+      if (users.length > 0 && users[0].password === loginData.password) {
+        // Redirect to dashboard
+        navigate("/dashboard");
+      } else {
+        alert("Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while logging in");
     }
   };
 

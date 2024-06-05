@@ -21,20 +21,32 @@ function RegisterForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple validation
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
       return;
     }
 
-    // Save data to local storage
-    localStorage.setItem("user", JSON.stringify(formData));
+    try {
+      const response = await fetch("http://localhost:5000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Redirect to login page
-    navigate("/login");
+      if (response.ok) {
+        navigate("/login");
+      } else {
+        alert("Failed to register");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while registering");
+    }
   };
 
   return (
