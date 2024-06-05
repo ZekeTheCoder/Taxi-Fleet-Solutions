@@ -1,6 +1,7 @@
 {
   "users": [
     {
+      "id": "1",
       "firstName": "Thabang ",
       "lastName": "Maphangisane",
       "email": "thabangh647@gmail.com",
@@ -8,12 +9,142 @@
       "confirmPassword": "123"
     },
     {
-      "id": "96d0",
+      "id": "2",
       "firstName": "Thabang ",
       "lastName": "Maphangisane",
       "email": "thabangh647@gmail.com2",
       "password": "456",
       "confirmPassword": "456"
+    }
+  ],
+  "customers": [
+    {
+      "id": "1717593276676",
+      "fullName": "Thabang",
+      "email": "thabangh647@gmail.com",
+      "phone": "0729959556",
+      "gender": "Others",
+      "address": "Rabie street, Randburg,2188",
+      "paymentDate": "2024-06-04",
+      "expiryDate": "2024-06-13",
+      "pickUpLocation": "Juta Street",
+      "dropOffLocation": "Cosmo",
+      "description": "school child",
+      "status": "Terminated"
+    },
+    {
+      "id": "1717593276677",
+      "fullName": "Thabang",
+      "email": "thabangh647@gmail.com",
+      "phone": "0729959556",
+      "gender": "Female",
+      "address": "112 Rabie street, Randburg,2188",
+      "paymentDate": "2024-06-04",
+      "expiryDate": "2024-06-13",
+      "pickUpLocation": "Juta Street",
+      "dropOffLocation": "Cosmo",
+      "description": "school child",
+      "status": "active"
+    }
+  ],
+  "drivers": [
+    {
+      "id": "1717595364622",
+      "fullName": "Thabang",
+      "vehiclePlate": "FZ 09 FT GP",
+      "email": "thabangh647@gmail.com",
+      "phone": "0729959556",
+      "gender": "Female",
+      "address": "Rabie street, Randburg,2188",
+      "description": "school child"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "1717596582104",
+      "vehicleName": "Toyota Quantum",
+      "licencePlate": "FZ 09 FT GP",
+      "model": "Quatum",
+      "make": "Toyota",
+      "vinNumber": "kdn r90rl neuigonguwr",
+      "year": "2015",
+      "driverName": "David",
+      "description": "white taxi with dim",
+      "mileage": "0520021"
+    }
+  ],
+  "salaries": [
+    {
+      "salary": {
+        "id": "1717599672247",
+        "name": "tHABANG",
+        "paymentMethod": "Cash",
+        "description": "white taxi with dim",
+        "salaryAmount": 100,
+        "paymentDate": "2024-06-06"
+      },
+      "name": "Thabang",
+      "salaryAmount": "2001",
+      "paymentDate": "2024-06-12",
+      "description": "white taxi",
+      "id": "1717599672247",
+      "paymentMethod": "Cash"
+    }
+  ],
+  "incomes": [
+    {
+      "id": "1717601497120",
+      "name": "Thabang",
+      "debiter": "Maphangsiane",
+      "category": "Daily",
+      "type": "Driver",
+      "description": "school child",
+      "amount": 300,
+      "date": "2024-06-05"
+    },
+    {
+      "id": "1717601528825",
+      "name": "Thabang Masane",
+      "debiter": "Masane",
+      "category": "Monthly",
+      "type": "Customer",
+      "description": "schl child",
+      "amount": 500,
+      "date": "2024-06-05"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "1717601812804",
+      "name": "Thabang M",
+      "creditor": "Maps",
+      "category": "Daily",
+      "type": "Driver",
+      "description": "white taxi",
+      "amount": 500,
+      "date": "2024-06-06"
+    }
+  ],
+  "payments": [
+    {
+      "id": "1717616547369",
+      "depositerID": "1717596582104",
+      "category": "Vehicle",
+      "type": "Expense",
+      "period": "Monthly",
+      "paymentDate": "2024-06-05",
+      "description": "service",
+      "paymentAmount": "500"
+    },
+    {
+      "id": "1717619032681",
+      "depositerID": "1717596582104",
+      "category": "Vehicle",
+      "type": "Expense",
+      "period": "Once-Off",
+      "paymentDate": "2024-06-05",
+      "description": "car maintanance",
+      "paymentAmount": 500
     }
   ]
 }
