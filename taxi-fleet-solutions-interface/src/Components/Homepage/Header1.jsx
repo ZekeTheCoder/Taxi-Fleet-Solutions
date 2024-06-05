@@ -1,6 +1,5 @@
 import React from "react";
-import "./style.css";
-
+// import "./home-style.css";
 function Header1() {
   return (
     <>
@@ -43,7 +42,12 @@ function Header1() {
             </a>
           </li>
         </ul>
-        <button className="btn btn-secondary">Get Started</button>
+        <button className="btn btn-secondary">
+          <a href="/register">Get Started</a>
+        </button>
+        <button className="btn btn-secondary">
+          <a href="/login">Login</a>
+        </button>
       </nav>
       {/* </div> */}
     </>

@@ -13,9 +13,9 @@ function Footer() {
                 alt="TFS logo"
               />
             </a> */}
-            <p className="footer-text">
+            {/* <p className="footer-text">
               Professionally taxi fleet solutions for your taxi business needs.
-            </p>
+            </p> */}
             <ul className="social-list">
               {["google", "twitter", "instagram", "linkedin"].map(
                 (platform, index) => (

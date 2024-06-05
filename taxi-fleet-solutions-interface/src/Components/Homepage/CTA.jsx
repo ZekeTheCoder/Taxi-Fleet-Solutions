@@ -1,5 +1,4 @@
 import React from "react";
-// import "./style.css";
 
 function CTA() {
   return (
@@ -8,14 +7,11 @@ function CTA() {
         {/* <div className="container"> */}
         <div className="title-wrapper">
           <h2 className="h2 cta-title">
-            <span>Create Free Account & Get Register</span>
-            {/* <img
-              src="./assets/images/cta-vector.svg"
-              alt="Vector arrow art"
-              className="vector-line"
-            /> */}
+            <span>Create Free Account & Get Started</span>
           </h2>
-          <button className="btn btn-primary">Register Now</button>
+          <button className="btn btn-primary">
+            <a href="/register">Register Now</a>
+          </button>
         </div>
         <div className="cta-banner"></div>
         {/* </div> */}

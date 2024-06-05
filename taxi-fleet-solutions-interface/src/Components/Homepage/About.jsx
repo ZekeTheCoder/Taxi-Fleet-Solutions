@@ -13,7 +13,9 @@ function About() {
           Continually administrate process-centric human capital . Distinctively
           supply accurate methods of calculations and analysis.
         </p>
-        <button className="btn btn-primary">Get Started Today</button>
+        <button className="btn btn-primary">
+          <a href="/register">Get Started Today</a>
+        </button>
       </div>
       {/* </div> */}
       {/* </section> */}
