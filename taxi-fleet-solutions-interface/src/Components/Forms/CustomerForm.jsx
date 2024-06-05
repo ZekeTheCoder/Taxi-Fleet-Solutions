@@ -10,10 +10,6 @@ function CustomerForm() {
   const [isEditing, setIsEditing] = useState(false);
   const [editCustomerId, setEditCustomerId] = useState(null);
   const [showForm, setShowForm] = useState(false);
-
-  // creating a navigate variable to redirect
-  const navigate = useNavigate();
-
   const [customerDetails, setCustomerDetails] = useState({
     id: "",
     fullName: "",
@@ -28,6 +24,9 @@ function CustomerForm() {
     description: "",
     status: "",
   });
+
+  // creating a navigate variable to redirect
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCustomers();
@@ -57,8 +56,6 @@ function CustomerForm() {
 
     if (isEditing) {
       try {
-        // console.log(editCustomerId);
-        // console.log(customerDetails);
         await axios.put(`${API_URL}/${editCustomerId}`, customerDetails);
         setIsEditing(false);
         setEditCustomerId(null);
@@ -104,6 +101,7 @@ function CustomerForm() {
   };
 
   const handleEditCustomer = (customer) => {
+    setShowForm(!showForm);
     setIsEditing(true);
     setEditCustomerId(customer.id);
     setCustomerDetails(customer);
@@ -282,6 +280,7 @@ function CustomerForm() {
         </form>
       )}
 
+      {/* Customers list */}
       {customers.length > 0 ? (
         <div className="expenses-list">
           <h2>Customers List</h2>
@@ -299,8 +298,8 @@ function CustomerForm() {
                 <th>Drop Off Location</th>
                 <th>Description</th>
                 <th>Status</th>
-                <th>Delete</th>
                 <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -318,13 +317,13 @@ function CustomerForm() {
                   <td>{customer.description}</td>
                   <td>{customer.status}</td>
                   <td>
-                    <button onClick={() => handleDeleteCustomer(customer.id)}>
-                      Delete
+                    <button onClick={() => handleEditCustomer(customer)}>
+                      Edit
                     </button>
                   </td>
                   <td>
-                    <button onClick={() => handleEditCustomer(customer)}>
-                      Edit
+                    <button onClick={() => handleDeleteCustomer(customer.id)}>
+                      Delete
                     </button>
                   </td>
                 </tr>
