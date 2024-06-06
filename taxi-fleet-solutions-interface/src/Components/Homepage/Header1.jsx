@@ -43,12 +43,14 @@ function Header1() {
               </a>
             </li>
           </ul>
+          {/* <div> */}
           <button className="btn btn-secondary">
-            <a href="/register">Get Started</a>
+            <a href="/register">Register</a>
           </button>
           <button className="btn btn-secondary">
             <a href="/login">Login</a>
           </button>
+          {/* </div> */}
         </nav>
       </div>
     </>

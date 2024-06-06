@@ -26,10 +26,10 @@ function About() {
           fees such as rank fees. It is developed based on a potential client in
           mind.
         </p>
-
+        {/* 
         <button className="btn btn-primary">
           <a href="/register">Get Started Today</a>
-        </button>
+        </button> */}
       </div>
       {/* </div> */}
       {/* </section> */}

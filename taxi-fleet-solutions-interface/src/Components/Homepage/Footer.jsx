@@ -31,6 +31,20 @@ function Footer() {
           <div className="footer-link-box">
             {[
               {
+                title: "Contact",
+                links: [
+                  { text: "Call : 071 234 5678", href: "tel:011 234 5678" },
+                  {
+                    text: "Email : taxifleetsolutions@gmail.com",
+                    href: "mailto:taxifleetsolutions@gmail.com",
+                  },
+                  {
+                    text: "Address : Johannesburg, Gauteng, South Africa",
+                    href: "#",
+                  },
+                ],
+              },
+              {
                 title: "Services",
                 links: [
                   "Business Data Analysis",
@@ -45,20 +59,6 @@ function Footer() {
               {
                 title: "Account Info",
                 links: ["Portal", "Dashboard"],
-              },
-              {
-                title: "Contact",
-                links: [
-                  { text: "Call : 071 234 5678", href: "tel:011 234 5678" },
-                  {
-                    text: "Email : taxifleetsolutions@gmail.com",
-                    href: "mailto:taxifleetsolutions@gmail.com",
-                  },
-                  {
-                    text: "Address : Johannesburg, Gauteng, South Africa",
-                    href: "#",
-                  },
-                ],
               },
             ].map((section, index) => (
               <ul key={index} className="footer-list">
