@@ -56,6 +56,12 @@ function Sidebar() {
               <i className="fas fa-cog"></i>&nbsp;<span>Settings</span>
             </NavLink>
           </li>
+          <li>
+            <a href="/" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Logout</span>
+            </a>
+          </li>
         </ul>
       </div>
     </>
