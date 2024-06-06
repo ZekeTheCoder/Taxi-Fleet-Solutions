@@ -42,7 +42,10 @@ function Footer() {
                 title: "Company",
                 links: ["About", "Terms", "Privacy Policy", "Careers"],
               },
-              { title: "Job Info", links: ["Select", "Services", "Payment"] },
+              {
+                title: "Account Info",
+                links: ["Portal", "Dashboard"],
+              },
               {
                 title: "Contact",
                 links: [

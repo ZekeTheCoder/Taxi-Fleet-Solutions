@@ -6,6 +6,7 @@ import Cards from "./Dashboards/Cards";
 import RecentPayments from "./Dashboards/RecentPayments";
 import NewCustomers from "./Dashboards/NewCustomers";
 import "./dashboard1.css";
+import IncomeForm2 from "./Forms/IncomeForm2";
 
 function Dashboard1() {
   return (
@@ -15,7 +16,7 @@ function Dashboard1() {
           <div class="navbar">
             <div class="logo">
               <img src="/pic/logo.jpg" alt=""></img>
-              <h1>jobs</h1>
+              <h1>TFS</h1>
             </div>
             <ul>
               <li>
@@ -65,12 +66,12 @@ function Dashboard1() {
         </nav>
         <section class="main">
           <div class="main-top">
-            <p>Explore the universe!</p>
+            <p>Taxi Fleet Solutions </p>
           </div>
           <div class="main-body">
-            <h1>Recent Jobs</h1>
+            <IncomeForm2 />
 
-            <div class="search_bar">
+            {/* <div class="search_bar">
               <input type="search" placeholder="Search job here..."></input>
               <select name="" id="">
                 <option>Category</option>
@@ -181,7 +182,7 @@ function Dashboard1() {
                 <h4>$12.5 - $25.5k /yr</h4>
                 <span>4 days ago</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

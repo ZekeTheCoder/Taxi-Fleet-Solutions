@@ -8,16 +8,16 @@
 	 * colors
 	 */
 
-	--rich-black-fogra-29: hsl(240, 13%, 8%);
+	--rich-black-fogra-29: hsl(240deg 5.89% 38.81%);
 	--silver-chalice: hsl(0, 0%, 70%);
 	--floral-white: hsl(38, 100%, 98%);
 	--raisin-black: hsl(240, 8%, 18%);
 	--sonic-silver: hsl(240, 3%, 45%);
-	--mango-tango: hsl(20, 100%, 64%);
-	--orange-web: hsl(39, 100%, 50%);
+	--mango-tango: hsl(118, 41%, 62%);
+	--orange-web: hsl(118, 41%, 62%);
 	--cultured: hsl(210, 17%, 98%);
 	--mantis: hsl(118, 41%, 62%);
-	--gambog: hsl(39, 100%, 45%);
+	--gambog: hsl(118, 41%, 62%);
 	--black: hsl(0, 0%, 0%);
 	--white: hsl(0, 0%, 100%);
 	--onyx: hsl(0, 0%, 23%);
@@ -104,6 +104,7 @@ body {
 
 .home-container {
 	padding-inline: 15px;
+	max-width: 100vh;
 }
 
 
@@ -182,7 +183,8 @@ body {
 
 .header1 {
 	padding-block: 25px;
-	position: fixed;
+	background: var(--cultured--rich-black-fogra-29);
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -191,7 +193,7 @@ body {
 }
 
 .header1.active {
-	background: var(--cultured);
+	background: var(--cultured--rich-black-fogra-29);
 	box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
 	padding-block: 20px;
 }
@@ -222,7 +224,7 @@ body {
 	width: 100%;
 	max-width: 250px;
 	height: 100%;
-	background: var(--mantis);
+	background: var(--rich-black-fogra-29);
 	padding: 80px 20px;
 	transition: 0.15s ease-in;
 	z-index: 3;
@@ -280,8 +282,18 @@ body {
   \*-----------------------------------*/
 
 .hero {
-	background: var(--gradient);
+	/* background: var(--gradient); */
+	background: var(--floral-white);
 	padding: 150px 0 var(--section-padding);
+	max-height: 100vh;
+	/* max-width: 100vh; */
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.hero-container {
+	/* background: black; */
+	/* padding: 150px 0 var(--section-padding); */
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -291,7 +303,8 @@ body {
 }
 
 .hero-banner img {
-	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .hero-title {
@@ -308,6 +321,12 @@ body {
 
 .about {
 	padding-block: var(--section-padding);
+}
+
+section.about {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 .about-banner {
@@ -377,9 +396,14 @@ body {
 	margin-bottom: 80px;
 }
 
-.services-list {
+/* .services-list {
 	display: grid;
 	gap: 30px;
+	margin-bottom: 50px;
+} */
+.services-list {
+	display: flex;
+	justify-content: space-evenly;
 	margin-bottom: 50px;
 }
 

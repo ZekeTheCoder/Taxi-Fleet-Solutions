@@ -57,6 +57,16 @@
       "gender": "Female",
       "address": "Rabie street, Randburg,2188",
       "description": "school child"
+    },
+    {
+      "id": "1717670104092",
+      "fullName": "Thabang H Maphangisane",
+      "vehiclePlate": "HZ 09 FT GP",
+      "email": "Thabang@gmail.com",
+      "phone": "10729959556",
+      "gender": "Male",
+      "address": "Rabie street, Randburg,2188",
+      "description": "short guy"
     }
   ],
   "vehicles": [
@@ -145,6 +155,76 @@
       "paymentDate": "2024-06-05",
       "description": "car maintanance",
       "paymentAmount": 500
+    },
+    {
+      "id": "1717616547361",
+      "depositerID": "1717596582104",
+      "category": "Vehicle",
+      "type": "Income",
+      "period": "Monthly",
+      "paymentDate": "2024-06-05",
+      "description": "service",
+      "paymentAmount": "500"
+    },
+    {
+      "id": "1717664995650",
+      "depositerID": "1717595364622",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-02",
+      "description": "daily check in",
+      "paymentAmount": 200
+    },
+    {
+      "id": "1717665027223",
+      "depositerID": "1717595364622",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-03",
+      "description": "daily check in",
+      "paymentAmount": 300
+    },
+    {
+      "id": "1717665056912",
+      "depositerID": "1717595364622",
+      "category": "Driver",
+      "type": "Expense",
+      "period": "Once-Off",
+      "paymentDate": "2024-06-04",
+      "description": "daily check in",
+      "paymentAmount": 100
+    },
+    {
+      "id": "1717665185984",
+      "depositerID": "1717595364622",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-05",
+      "description": "daily check in",
+      "paymentAmount": 500
+    },
+    {
+      "id": "1717665216007",
+      "depositerID": "1717595364622",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Once-Off",
+      "paymentDate": "2024-06-06",
+      "description": "trip",
+      "paymentAmount": 1000
+    },
+    {
+      "id": "1717670173883",
+      "depositerID": "1717670104092",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-06",
+      "description": "daily check in",
+      "paymentAmount": 1000
     }
   ]
 }

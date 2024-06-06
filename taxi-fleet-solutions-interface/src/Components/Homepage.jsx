@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Homepage/home-style.css";
+import "./Homepage/home-style.css";
 import Header1 from "./Homepage/Header1";
 import CTA from "./Homepage/CTA";
 import Footer from "./Homepage/Footer";
@@ -10,11 +10,11 @@ import Services from "./Homepage/Services";
 function Homepage() {
   return (
     <>
-      <header class="header1" data-header>
+      <div class="header1">
         <div class="home-container">
           <Header1 />
         </div>
-      </header>
+      </div>
       <main>
         <article>
           <section className="hero">

@@ -6,6 +6,8 @@ import Cards from "./Dashboards/Cards";
 import RecentPayments from "./Dashboards/RecentPayments";
 import NewCustomers from "./Dashboards/NewCustomers";
 import "./Dashboards/styles/stylesheet.css";
+import IncomeForm from "./Forms/IncomeForm";
+import IncomeForm2 from "./Forms/IncomeForm2";
 
 function Dashboard() {
   return (
@@ -14,13 +16,14 @@ function Dashboard() {
       <div className="dashboard-container">
         <div className="dashboard-container-content">
           <Header />
-          <div className="content">
+          <IncomeForm2 />
+          {/* <div className="content">
             <Cards />
             <div className="content-2">
               <RecentPayments />
               <NewCustomers />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
