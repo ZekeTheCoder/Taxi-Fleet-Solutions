@@ -54,6 +54,8 @@ function IncomeForm2() {
   const [isEditing, setIsEditing] = useState(false);
   const [editPaymentId, setEditPaymentId] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
+  const [showSalary, setShowSalary] = useState(false);
 
   const navigate = useNavigate();
 
@@ -471,12 +473,18 @@ function IncomeForm2() {
                     <td>{payment.paymentAmount}</td>
                     <td>{payment.description}</td>
                     <td>
-                      <button onClick={() => handleEditPayment(payment)}>
+                      <button
+                        className="btn"
+                        onClick={() => handleEditPayment(payment)}
+                      >
                         Edit
                       </button>
                     </td>
                     <td>
-                      <button onClick={() => handleDeletePayment(payment.id)}>
+                      <button
+                        className="btn"
+                        onClick={() => handleDeletePayment(payment.id)}
+                      >
                         Delete
                       </button>
                     </td>
@@ -497,151 +505,166 @@ function IncomeForm2() {
           <p>No payments. Add a new payments.</p>
         )}
 
+        {/*  Show Summary button */}
+        <button className="btn" onClick={() => setShowSummary(!showSummary)}>
+          {showSummary ? "Close Summary" : "Show Summary"}
+        </button>
         {/* Income and Expense filtering */}
-        <div>
-          <h1>Income and Expense Summary</h1>
-          <p>Total Income: R{totalIncome.toFixed(2)}</p>
-          <p>Total Expense: R{totalExpense.toFixed(2)}</p>
-          <p>Net Total: R{netTotal.toFixed(2)}</p>
+        {showSummary && (
+          <div>
+            <h1>Income and Expense Summary</h1>
+            <p>Total Income: R{totalIncome.toFixed(2)}</p>
+            <p>Total Expense: R{totalExpense.toFixed(2)}</p>
+            <p>Net Total: R{netTotal.toFixed(2)}</p>
 
-          <h3>Incomes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Depositor ID</th>
-                <th>Category</th>
-                <th>Period</th>
-                <th>Payment Date</th>
-                <th>Description</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              {incomes.map((income) => (
-                <tr key={income.id}>
-                  <td>{income.depositerID}</td>
-                  <td>{income.category}</td>
-                  <td>{income.period}</td>
-                  <td>{income.paymentDate}</td>
-                  <td>{income.description}</td>
-                  <td>R{income.paymentAmount}</td>
+            <h3>Incomes</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Depositor ID</th>
+                  <th>Category</th>
+                  <th>Period</th>
+                  <th>Payment Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {incomes.map((income) => (
+                  <tr key={income.id}>
+                    <td>{income.depositerID}</td>
+                    <td>{income.category}</td>
+                    <td>{income.period}</td>
+                    <td>{income.paymentDate}</td>
+                    <td>{income.description}</td>
+                    <td>R{income.paymentAmount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
 
-          <h3>Expenses</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Depositor ID</th>
-                <th>Category</th>
-                <th>Period</th>
-                <th>Payment Date</th>
-                <th>Description</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              {expenses.map((expense) => (
-                <tr key={expense.id}>
-                  <td>{expense.depositerID}</td>
-                  <td>{expense.category}</td>
-                  <td>{expense.period}</td>
-                  <td>{expense.paymentDate}</td>
-                  <td>{expense.description}</td>
-                  <td>R{expense.paymentAmount}</td>
+            <h3>Expenses</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Depositor ID</th>
+                  <th>Category</th>
+                  <th>Period</th>
+                  <th>Payment Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {expenses.map((expense) => (
+                  <tr key={expense.id}>
+                    <td>{expense.depositerID}</td>
+                    <td>{expense.category}</td>
+                    <td>{expense.period}</td>
+                    <td>{expense.paymentDate}</td>
+                    <td>{expense.description}</td>
+                    <td>R{expense.paymentAmount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {/*  Show Summary button */}
+        <button className="btn" onClick={() => setShowSalary(!showSalary)}>
+          {showSalary ? "Close Salary" : "Show Salary"}
+        </button>
+        <br />
+        <br />
 
         {/* Driver Summary */}
-        <div>
-          <h1>Driver Summary</h1>
-          <label htmlFor="driverId-select">Driver:</label>
-          <select
-            id="driverId-select"
-            value={driverId}
-            onChange={handleDriverChange}
-          >
-            <option value="" disabled>
-              Select Driver
-            </option>
-            {drivers.map((driver) => (
-              <option key={driver.id} value={driver.id}>
-                {driver.fullName}
+        {showSalary && (
+          <div>
+            <h1>Driver Summary</h1>
+            <label htmlFor="driverId-select">Driver:</label>
+            <select
+              id="driverId-select"
+              value={driverId}
+              onChange={handleDriverChange}
+            >
+              <option value="" disabled>
+                Select Driver
               </option>
-            ))}
-          </select>
-          <button className="btn" onClick={handleFetchSummary}>
-            Fetch Summary
-          </button>
+              {drivers.map((driver) => (
+                <option key={driver.id} value={driver.id}>
+                  {driver.fullName}
+                </option>
+              ))}
+            </select>
+            <button className="btn" onClick={handleFetchSummary}>
+              Fetch Summary
+            </button>
 
-          {selectedDriver ? (
-            <>
-              <h2>
-                {/* Summary for Driver: {driverId} - {selectedDriver.fullName} */}
-                Summary for Driver: {selectedDriver.fullName}
-              </h2>
-              <p>Total Income: R{totalDriverIncome.toFixed(2)}</p>
-              <p>Total Expense: R{totalDriverExpense.toFixed(2)}</p>
-              <p>Net Total: R{netDriverTotal.toFixed(2)}</p>
-              <p>Salary (20%): R{salary.toFixed(2)}</p>
+            {selectedDriver ? (
+              <>
+                <h2>
+                  {/* Summary for Driver: {driverId} - {selectedDriver.fullName} */}
+                  Summary for Driver: {selectedDriver.fullName}
+                </h2>
+                <p>Total Income: R{totalDriverIncome.toFixed(2)}</p>
+                <p>Total Expense: R{totalDriverExpense.toFixed(2)}</p>
+                <p>Net Total: R{netDriverTotal.toFixed(2)}</p>
+                <p>Salary (20%): R{salary.toFixed(2)}</p>
 
-              <h3>Incomes</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Depositor ID</th>
-                    <th>Period</th>
-                    <th>Payment Date</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {driverIncomes.map((income) => (
-                    <tr key={income.id}>
-                      <td>{income.depositerID}</td>
-                      <td>{income.period}</td>
-                      <td>{income.paymentDate}</td>
-                      <td>{income.description}</td>
-                      <td>R{income.paymentAmount}</td>
+                <h3>Incomes</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Depositor ID</th>
+                      <th>Period</th>
+                      <th>Payment Date</th>
+                      <th>Description</th>
+                      <th>Amount</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {driverIncomes.map((income) => (
+                      <tr key={income.id}>
+                        <td>{income.depositerID}</td>
+                        <td>{income.period}</td>
+                        <td>{income.paymentDate}</td>
+                        <td>{income.description}</td>
+                        <td>R{income.paymentAmount}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
 
-              <h3>Expenses</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Depositor ID</th>
-                    <th>Period</th>
-                    <th>Payment Date</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {driverExpenses.map((expense) => (
-                    <tr key={expense.id}>
-                      <td>{expense.depositerID}</td>
-                      <td>{expense.period}</td>
-                      <td>{expense.paymentDate}</td>
-                      <td>{expense.description}</td>
-                      <td>R{expense.paymentAmount}</td>
+                <h3>Expenses</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Depositor ID</th>
+                      <th>Period</th>
+                      <th>Payment Date</th>
+                      <th>Description</th>
+                      <th>Amount</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </>
-          ) : (
-            <p>Select a driver to calculate salary</p>
-          )}
-        </div>
+                  </thead>
+                  <tbody>
+                    {driverExpenses.map((expense) => (
+                      <tr key={expense.id}>
+                        <td>{expense.depositerID}</td>
+                        <td>{expense.period}</td>
+                        <td>{expense.paymentDate}</td>
+                        <td>{expense.description}</td>
+                        <td>R{expense.paymentAmount}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            ) : (
+              <p>Select a driver to calculate salary</p>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
