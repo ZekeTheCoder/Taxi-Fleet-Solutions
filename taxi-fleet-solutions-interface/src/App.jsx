@@ -23,20 +23,26 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/Taxi-Fleet-Solutions/" element={<Homepage />} />
+        <Route path="/Taxi-Fleet-Solutions/dashboard" element={<Dashboard />} />
         <Route path="/dashboard1" element={<Dashboard1 />} />
 
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/Taxi-Fleet-Solutions/login" element={<LoginForm />} />
+        <Route
+          path="/Taxi-Fleet-Solutions/register"
+          element={<RegisterForm />}
+        />
 
-        <Route path="/salary" element={<SalaryForm />} />
-        <Route path="/income" element={<IncomeForm />} />
+        <Route path="/Taxi-Fleet-Solutions/salary" element={<SalaryForm />} />
+        <Route path="/Taxi-Fleet-Solutions/income" element={<IncomeForm />} />
         <Route path="/income2" element={<IncomeForm2 />} />
-        <Route path="/expense" element={<ExpenseForm />} />
-        <Route path="/driver" element={<DriverForm />} />
-        <Route path="/customer" element={<CustomerForm />} />
-        <Route path="/vehicle" element={<VehicleForm />} />
+        <Route path="/Taxi-Fleet-Solutions/expense" element={<ExpenseForm />} />
+        <Route path="/Taxi-Fleet-Solutions/driver" element={<DriverForm />} />
+        <Route
+          path="/Taxi-Fleet-Solutions/customer"
+          element={<CustomerForm />}
+        />
+        <Route path="/Taxi-Fleet-Solutions/vehicle" element={<VehicleForm />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
