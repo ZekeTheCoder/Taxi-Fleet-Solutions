@@ -105,6 +105,11 @@ body {
 .home-container {
 	padding-inline: 15px;
 	max-width: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	align-content: space-between;
+	flex-wrap: wrap;
+	/* background-color: aquamarine; */
 }
 
 
@@ -277,13 +282,18 @@ body {
 	opacity: 1;
 }
 
+.header-btn {
+	display: flex;
+	justify-content: space-between;
+}
+
 /*-----------------------------------*\
    * #HERO
   \*-----------------------------------*/
 
 .hero {
-	/* background: var(--gradient); */
-	background: var(--floral-white);
+	background: aquamarine;
+	/* background: var(--floral-white); */
 	padding: 150px 0 var(--section-padding);
 	max-height: 100vh;
 	/* max-width: 100vh; */
@@ -321,64 +331,18 @@ body {
 
 .about {
 	padding-block: var(--section-padding);
-}
-
-section.about {
-	align-items: center;
 	display: flex;
 	justify-content: center;
-}
-
-.about-banner {
-	position: relative;
-	margin-bottom: 40px;
-}
-
-.about-img {
-	width: 100%;
-}
-
-.play-btn {
-	position: absolute;
-	bottom: 24%;
-	right: 8%;
-	background: var(--white);
-	width: 80px;
-	height: 80px;
-	display: grid;
-	place-items: center;
-	font-size: 25px;
-	border-radius: 50%;
-}
-
-.play-btn::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	border-radius: 50%;
-	border: 1px solid var(--black);
-	animation: pulseAnim 2s forwards infinite;
-}
-
-@keyframes pulseAnim {
-
-	0% {
-		transform: scale(1);
-		border-color: var(--black);
-	}
-
-	100% {
-		transform: scale(1.5);
-		border-color: transparent;
-	}
-
+	align-items: center;
+	text-align: center;
+	/* Center-aligns the text */
 }
 
 .about-title {
 	margin-bottom: 30px;
 }
 
-.about .section-text {
+.section-text {
 	margin-bottom: 50px;
 }
 
@@ -388,7 +352,8 @@ section.about {
 
 .services {
 	padding-block: var(--section-padding);
-	background: var(--floral-white);
+	/* background: var(--floral-white); */
+	background: aquamarine;
 }
 
 .services-title {
@@ -468,6 +433,8 @@ section.about {
 .cta {
 	background: var(--raisin-black);
 	padding-block: 50px;
+	display: flex;
+	justify-content: space-around;
 }
 
 .cta-title {
@@ -488,7 +455,8 @@ section.about {
   \*-----------------------------------*/
 
 .footer {
-	background: var(--rich-black-fogra-29);
+	/* background: var(--rich-black-fogra-29); */
+	background: aquamarine;
 }
 
 .footer-top {
@@ -556,7 +524,7 @@ section.about {
 }
 
 .footer-link {
-	color: var(--silver-chalice);
+	color: var(--raisin-black);
 	font-family: var(--ff-rubik);
 	padding-block: 10px;
 	transition: var(--transition);
@@ -592,6 +560,7 @@ section.about {
 .footer-bottom {
 	padding-block: 20px;
 	border-top: 1px solid var(--onyx);
+	background: var(--raisin-black);
 }
 
 .copyright {

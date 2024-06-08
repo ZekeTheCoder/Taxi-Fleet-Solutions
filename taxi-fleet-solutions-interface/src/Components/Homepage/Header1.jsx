@@ -7,7 +7,7 @@ function Header1() {
       <div className="home-container">
         <div className="overlay" data-overlay></div>
         <a href="#" className="logo">
-          {/* <img src="./assets/images/logo.svg" alt="TFS logo" /> */}
+          <img src="src\assets\logo_TFS.jpg" /*alt="TFS logo"*/ />
           <h1>TFS</h1>
         </a>
         <button className="menu-open-btn" data-menu-open-btn>
@@ -43,14 +43,14 @@ function Header1() {
               </a>
             </li>
           </ul>
-          {/* <div> */}
-          <button className="btn btn-secondary">
-            <a href="/register">Register</a>
-          </button>
-          <button className="btn btn-secondary">
-            <a href="/login">Login</a>
-          </button>
-          {/* </div> */}
+          <div className="header-btn">
+            <button className="btn btn-secondary">
+              <a href="/register">Register</a>
+            </button>
+            <button className="btn btn-secondary">
+              <a href="/login">Login</a>
+            </button>
+          </div>
         </nav>
       </div>
     </>

@@ -15,6 +15,14 @@
       "email": "thabangh647@gmail.com2",
       "password": "456",
       "confirmPassword": "456"
+    },
+    {
+      "id": "3eb8",
+      "firstName": "Thabang ",
+      "lastName": "Maphangisane",
+      "email": "Thabang@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ],
   "customers": [
@@ -45,6 +53,20 @@
       "dropOffLocation": "Cosmo",
       "description": "school child",
       "status": "active"
+    },
+    {
+      "id": "1717688632436",
+      "fullName": "zeke",
+      "email": "zeke@gmail.com",
+      "phone": "0729959556",
+      "gender": "Male",
+      "address": "Rabie street, Randburg,2188",
+      "paymentDate": "2024-06-07",
+      "expiryDate": "2024-06-05",
+      "pickUpLocation": "Juta Street",
+      "dropOffLocation": "Cosmo",
+      "description": "worker",
+      "status": "active"
     }
   ],
   "drivers": [
@@ -67,6 +89,16 @@
       "gender": "Male",
       "address": "Rabie street, Randburg,2188",
       "description": "short guy"
+    },
+    {
+      "id": "1717688744082",
+      "fullName": "David",
+      "vehiclePlate": "HZ 09 FT GP",
+      "email": "david@gmail.com",
+      "phone": "10729959556",
+      "gender": "Male",
+      "address": "Rabie street, Randburg,2188",
+      "description": "tall guy"
     }
   ],
   "vehicles": [
@@ -225,6 +257,26 @@
       "paymentDate": "2024-06-06",
       "description": "daily check in",
       "paymentAmount": 1000
+    },
+    {
+      "id": "1717688687444",
+      "depositerID": "1717688632436",
+      "category": "Customer",
+      "type": "Income",
+      "period": "Once-Off",
+      "paymentDate": "2024-06-06",
+      "description": "worker",
+      "paymentAmount": 200
+    },
+    {
+      "id": "1717688781618",
+      "depositerID": "1717688744082",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Once-Off",
+      "paymentDate": "2024-06-07",
+      "description": "workers trip",
+      "paymentAmount": 5000
     }
   ]
 }

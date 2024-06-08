@@ -10,11 +10,8 @@ import Services from "./Homepage/Services";
 function Homepage() {
   return (
     <>
-      <div class="header1">
-        <div class="home-container">
-          <Header1 />
-        </div>
-      </div>
+      <Header1 />
+
       <main>
         <article>
           <section className="hero">

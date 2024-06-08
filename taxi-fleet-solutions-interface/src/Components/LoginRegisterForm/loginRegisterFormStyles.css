@@ -24,7 +24,8 @@ h4 {
 }
 
 form {
-	width: 300px;
+	/* width: 500px; */
+	max-width: 80%;
 	margin-left: 20px;
 }
 

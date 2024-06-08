@@ -24,11 +24,11 @@ function Services() {
         ].map((dept, index) => (
           <li key={index}>
             <div className="services-card">
-              <a href="#" className="card-banner">
+              {/* <a href="#" className="card-banner">
                 <figure>
                   <img src={dept.img} alt={dept.title} />
                 </figure>
-              </a>
+              </a> */}
               <a href="#">
                 <h3 className="h3 card-title">{dept.title}</h3>
               </a>
