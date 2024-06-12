@@ -1,26 +1,29 @@
 import React from "react";
 
 function Footer() {
+  //   const socialLinks = {
+  //     github: "https://github.com/yourusername",
+  //     linkedin: "https://www.linkedin.com/in/yourusername",
+  //     twitter: "https://twitter.com/yourusername",
+  //     whatsapp: "https://wa.me/yourphonenumber",
+  //     youtube: "https://www.youtube.com/channel/UC4-D6o4-bBYXXXLUZSkEAPw",
+  //   };
+
   return (
     <>
       <div className="footer">
         <div className="footer-top">
-          {/* <div className="container"> */}
           <div className="footer-brand">
-            {/* <a href="#" className="logo">
-              <img
-                src="src\Components\Homepage\assets\images\logo.svg"
-                alt="TFS logo"
-              />
-            </a> */}
-            {/* <p className="footer-text">
-              Professionally taxi fleet solutions for your taxi business needs.
-            </p> */}
             <ul className="social-list">
-              {["google", "twitter", "instagram", "linkedin"].map(
+              {["github", "linkedin", "twitter", "whatsapp", "youtube"].map(
                 (platform, index) => (
                   <li key={index}>
-                    <a href="#" className="social-link">
+                    <a
+                      //   href={socialLinks[platform]}
+                      className="social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ion-icon name={`logo-${platform}`}></ion-icon>
                     </a>
                   </li>
@@ -34,6 +37,7 @@ function Footer() {
                 title: "Contact",
                 links: [
                   { text: "Call : 071 234 5678", href: "tel:011 234 5678" },
+                  { text: "WhatsApp : 071 234 5678", href: "tel:011 234 5678" },
                   {
                     text: "Email : taxifleetsolutions@gmail.com",
                     href: "mailto:taxifleetsolutions@gmail.com",
@@ -49,7 +53,8 @@ function Footer() {
                 links: [
                   "Business Data Analysis",
                   "Income and Expense Tracker",
-                  "Human Resource Capital",
+                  "Human Resource Management",
+                  "Customer Relation",
                 ],
               },
               {
@@ -87,13 +92,10 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        {/* <div className="container"> */}
         <p className="copyright">
           &copy; 2024 <a href="#">Taxi Fleet Solutions</a>. All right reserved
         </p>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 }

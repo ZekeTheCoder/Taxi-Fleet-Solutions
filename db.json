@@ -31,6 +31,14 @@
       "email": "Maphangisane@gmail.com",
       "password": "123",
       "confirmPassword": "123"
+    },
+    {
+      "id": "c350",
+      "firstName": "Thabang ",
+      "lastName": "Maphangisane",
+      "email": "thabangh647@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ],
   "customers": [
