@@ -23,6 +23,14 @@
       "email": "Thabang@gmail.com",
       "password": "123",
       "confirmPassword": "123"
+    },
+    {
+      "id": "62ac",
+      "firstName": "Thabang Hezekiel",
+      "lastName": "Maphangisane",
+      "email": "Maphangisane@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ],
   "customers": [
@@ -67,6 +75,20 @@
       "dropOffLocation": "Cosmo",
       "description": "worker",
       "status": "active"
+    },
+    {
+      "id": "1717852705352",
+      "fullName": "Thabang Hezekiel Maphangisane",
+      "email": "Maphangisane@gmail.com",
+      "phone": "0719515412",
+      "gender": "Male",
+      "address": "638 Excelsior Street",
+      "paymentDate": "2024-06-08",
+      "expiryDate": "2024-06-07",
+      "pickUpLocation": "town",
+      "dropOffLocation": "local",
+      "description": "middle aged man",
+      "status": "active"
     }
   ],
   "drivers": [
@@ -99,6 +121,16 @@
       "gender": "Male",
       "address": "Rabie street, Randburg,2188",
       "description": "tall guy"
+    },
+    {
+      "id": "1717852912224",
+      "fullName": "jojn doe",
+      "vehiclePlate": "gh 15 hj gp",
+      "email": "johndo@email.com",
+      "phone": "0123456789",
+      "gender": "Male",
+      "address": "111 Rabie streer",
+      "description": "tall"
     }
   ],
   "vehicles": [
@@ -277,6 +309,36 @@
       "paymentDate": "2024-06-07",
       "description": "workers trip",
       "paymentAmount": 5000
+    },
+    {
+      "id": "1717852817389",
+      "depositerID": "1717852705352",
+      "category": "Customer",
+      "type": "Income",
+      "period": "Monthly",
+      "paymentDate": "2024-06-08",
+      "description": "middle aged man",
+      "paymentAmount": 500
+    },
+    {
+      "id": "1717852951526",
+      "depositerID": "1717852912224",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-08",
+      "description": "rank fee",
+      "paymentAmount": 300
+    },
+    {
+      "id": "1717852983158",
+      "depositerID": "1717852912224",
+      "category": "Driver",
+      "type": "Income",
+      "period": "Daily",
+      "paymentDate": "2024-06-09",
+      "description": "rank fee",
+      "paymentAmount": 100
     }
   ]
 }
