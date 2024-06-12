@@ -8,6 +8,10 @@ Taxi Fleet Solutions is an income and expense tracker designed for taxi fleet ow
 - **Final Project Blog Article**: [Read the blog post](#)
 - **Author(s) LinkedIn**: [Thabang Hezekiel Maphangisane](#)
 
+## Logo
+
+![Taxi Fleet Solutions Logo](src/assets/logos/logo3.png)
+
 ## Installation
 
 To install and run Taxi Fleet Solutions locally, follow these steps:
